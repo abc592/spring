@@ -6,4 +6,8 @@
            http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
     <!-- Bean definitions go here -->
+    <bean id ="ltime" class="java.time.LocalTime" factory-method="now"/>
+    <bean id ="wmg" class="com.nt.sbeans.WishMessageGenerator">
+    	<property name ="time" ref="ltime"/>
+    </bean>
 </beans>
